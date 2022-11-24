@@ -1,0 +1,150 @@
+body{
+    background: rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a:visited {
+    color: rgb(63, 63, 63);
+    text-decoration: none
+}
+
+a:link {
+    color: rgb(63, 63, 63);
+    text-decoration: none;
+}
+
+a:hover {
+    color: hotpink;
+}
+#login-form{
+    font-size: large;
+    width: 25%;
+    background-color: white;
+    margin: 10% auto;
+    padding: 50px 20px;
+    text-align: center;
+    border: 2px solid rgba(28, 110, 164, 0.1);
+    border-radius: 7px;
+    -webkit-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+
+
+}
+
+.login_input{
+    /* display: inline-block; */
+    border: 2px inset rgba(20, 55, 78, 0.18);
+    border-left:none;
+    /* margin: 4px; */
+    height: 30px;
+    width: 90%;
+    outline: none;
+    text-align: center;
+}
+
+.login_input:focus {
+    border: 2px inset rgba(20, 55, 78, 0.18);
+    border-left: none;
+    /* margin: 4px; */
+    /* width: 70%; */
+    outline: rgba(20, 55, 78, 0.18) solid 2px;
+}
+
+
+#submit_button{
+    width: 50%;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    background: rgb(128, 221, 255);
+    border-radius: 4px;
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%, rgba(221, 6, 236, 1) 100%);
+}
+
+#submit_button:hover{
+    cursor: pointer;
+    background: rgb(105, 181, 209);
+    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
+}
+.fa-check-circle
+{
+    position: absolute;
+    right: 8%;
+    top:30%;
+    /* color:#15e245; */
+    color:#15e245;
+    opacity:0;
+    /* display:none !important ; */
+
+}
+.fa-times-circle
+{
+    position: absolute;
+    right: 8%;
+    top:30%;
+    color:#ea240a;
+    opacity:0;
+    /* display: none !important; */
+
+}
+.backgr{
+    position: absolute;
+    height:100%;
+    width:15%;
+    background-color:rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%, rgba(221, 6, 236, 1) 100%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    /* border:solid 2px; */
+    border-color: aqua;
+}
+.fa-lock
+{
+    /* position:absolute; */
+    /* top:40%; */
+    /* left:30%;
+    top:4%; */
+    color:white;
+
+}
+.fa-key
+{
+    color:white;
+}
+.fa-envelope
+{
+    color:white;
+}
+.shit
+{
+    position: relative;
+    border:solid 1px;
+    /* display: inline-block; */
+    /* border:solid 1px; */
+    /* border:solid 1px; */
+}
+.fa-address-card
+{
+    color:white;
+}
+.fa-home
+{
+    color:white;
+}
+.fa-user
+{
+    color:white;
+}
+
+/* .fa{
+    color:white;
+} */
+/* .fa-address-card
+{
+    color:white
+} */
