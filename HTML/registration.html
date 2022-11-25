@@ -111,6 +111,17 @@
             function containsChars(word, list_of_all_words) {
                 return list_of_all_words.test(word);
             }
+            function check_enabling()
+        {
+            if(Object.values(check_dict).filter(x=>x==true).length === 6)
+            {
+                submitButton.disabled = false;
+            }
+            else
+            {
+                submitButton.disabled = true    ;
+            }
+        }
             pass.addEventListener('input', ()=>
             {
                 if(pass.value.length != 0)
@@ -155,13 +166,15 @@
                 {
                     document.getElementById("ppicon").style.opacity = 1;
                     document.getElementById("wpxicon").style.opacity = 0;
-                    check_dict.password = true;      
+                    check_dict.password = true;
+                    check_enabling()     
                 }
                 else
                 {
                     document.getElementById("ppicon").style.opacity = 0;
                     document.getElementById("wpxicon").style.opacity = 1;
-                    check_dict.password = false;                       
+                    check_dict.password = false;        
+                    check_enabling()                   
                 }
 
             })
@@ -172,6 +185,7 @@
                 document.getElementById("plicon").style.opacity = 1;
                 document.getElementById("wlicon").style.opacity = 0;
                 check_dict.log = true;
+                check_enabling()    
 
             }
             else
@@ -179,6 +193,7 @@
                 document.getElementById("wlicon").style.opacity = 1;
                 document.getElementById("plicon").style.opacity = 0;
                 check_dict.log = false;
+                check_enabling()    
             }
 
         })
@@ -189,6 +204,7 @@
                 document.getElementById("peicon").style.opacity = 1;
                 document.getElementById("weicon").style.opacity = 0;
                 check_dict.em = true;
+                check_enabling()    
 
             }
             else
@@ -196,6 +212,7 @@
                 document.getElementById("peicon").style.opacity = 0;
                 document.getElementById("weicon").style.opacity = 1;
                 check_dict.em = false;
+                check_enabling()    
             }
 
         })
@@ -206,12 +223,14 @@
                 document.getElementById("paicon").style.opacity = 1;
                 document.getElementById("waicon").style.opacity = 0;
                 check_dict.adr = true;
+                check_enabling()    
             }
             else
             {
                 document.getElementById("paicon").style.opacity = 0;
                 document.getElementById("waicon").style.opacity = 1;
                 check_dict.adr =false;
+                check_enabling()    
             }
 
         })
@@ -222,12 +241,14 @@
                 document.getElementById("psicon").style.opacity = 1;
                 document.getElementById("wsicon").style.opacity = 0;
                 check_dict.surname = true;
+                check_enabling()    
             }
             else
             {
                 document.getElementById("psicon").style.opacity = 0;
                 document.getElementById("wsicon").style.opacity = 1;
                 check_dict.surname = false;
+                check_enabling()    
             }
 
         })
@@ -238,6 +259,7 @@
                 document.getElementById("pnicon").style.opacity = 1;
                 document.getElementById("wnicon").style.opacity = 0;
                 check_dict.namex =true;
+                check_enabling()    
 
             }
             else
@@ -245,18 +267,10 @@
                 document.getElementById("pnicon").style.opacity = 0;
                 document.getElementById("wnicon").style.opacity = 1;
                 check_dict.namex = false;
+                check_enabling()    
             }
 
         })
-        if(Object.values(check_dict).filter(x=>x==true).length === 6)
-        {
-            submitButton.disabled = false;
-        }
-        else
-        {
-            submitButton.disabled = true    ;
-        }
-
     
             
         </script>
