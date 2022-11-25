@@ -77,13 +77,13 @@
                     </div>
             <input id = "password" class="login_input" type="password" placeholder="hasło" name = "password">
             </div>
-            <div class ="indicator">
-                    <i id ="exclamation" class ="fa fa-exclamation-circle" ></i>
-                    <h6 id = "pinfo" class ="passwordinfo" >dupa</h6>
+            <div class = "sidemenu">
+                <h6 id = "pinfo1" class ="passinfo" > ● Hasło musi zawierać min. 8 znaków</h6>
+                <h6 id = "pinfo2" class ="passinfo" > ● Hasło musi zawierać min. 1 znak specjalny</h6>
+                <h6 id = "pinfo3" class ="passinfo" > ● Hasło musi zawierać min. 1 cyfrę</h6> 
             </div>
-
             <br />
-                <input id="submit_button" type="submit" value="Zarejestruj się"><br /><br /><br />x
+                <input id="submit_button" type="submit" value="Register now!" disabled="true"><br /><br /><br />x
             </form>
             <a href="/login"><label>Masz już konto? Zaloguj się!</label><br /></a>
             <!-- <div class="logging">
@@ -91,60 +91,79 @@
                     <button class="btnx" type ="sumbit" name ="button"> Zaloguj się</button>
                 </form> -->
         </div>
+        </div>
         <script>
             var pass = document.getElementById("password");
             var pinfo =document.getElementById("pinfo");
             var exc = document.getElementById("exclamation");
             var borders = document.getElementsByClassName("login_input");
-            // var pass_check = document.getElementById("picon");
-            // var passx = document.getElementsByClassName("fa-check-circle")
             var log = document.getElementById("login");
             var em = document.getElementById("emails");
             var adr = document.getElementById("adres");
             var surname = document.getElementById("surnamex");
-            var namex  = document.getElementById("names");
+            var namex = document.getElementById("names");
+            var pinfo1  = document.getElementById("pinfo1");
+            var pinfo2 = document.getElementById("pinfo2");
+            var pinfo3 = document.getElementById("pinfo3");
+            var dict = {};
+            var submitButton = document.getElementById("submit_button");
+            var check_dict = {}
+            function containsChars(word, list_of_all_words) {
+                return list_of_all_words.test(word);
+            }
             pass.addEventListener('input', ()=>
             {
-    
-                if (pass.value.length === 0)
+                if(pass.value.length != 0)
                 {
-                    pinfo.innerHTML = "Waiting for your password"
+                    pinfo1.style.display = "block";
+                    pinfo2.style.display = "block";
+                    pinfo3.style.display = "block";                 
                 }
-                else if (pass.value.length <=4)
-                {
-                    document.getElementById("wpxicon").style.opacity = 1;
-                    document.getElementById("ppicon").style.opacity = 0;
-                    pinfo.style.visibility = "visible";
-                    exc.style.visibility = "visible";
-                    exc.style.color = "#ff0000";
-                    exc.style.display = "block";
-                    // exc.style.display = 'block';
-                    pinfo.innerHTML = "Password is weak";
-                    pinfo.style.color = "#ff0000";
-                    pass.style.borderColor= "#ff0000";
-                    pass.style.borderLeft=none;
-                    pass.style.border ="solid"
-    
-    
+                else{
+                    pinfo1.style.display = "none";
+                    pinfo2.style.display = "none";
+                    pinfo3.style.display = "none";     
                 }
-                else if (pass.value.length >=4 && pass.value.length <8)
+                if (containsChars(pass.value, /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/ ))
                 {
-                    pinfo.innerHTML = "Password is medium";
-                    pinfo.style.color ="#ff8000";
-                    exc.style.color ="#ff8000";
-                    pass.style.borderColor ="#ff8000";
+                    pinfo2.style.display = "none";
+                    dict.specChars = true;
                 }
                 else
                 {
-                    pinfo.innerHTML = "Password is strong";
-                    pinfo.style.color = "#00ff00";
-                    exc.style.color = "#00ff00";
-                    pass.style.borderColor = "#00ff00";
+                    dict.specChars = false;
+                }
+                if (containsChars(pass.value, /\d/))
+                {
+                    pinfo3.style.display = "none";
+                    dict.digits = true;
+                }
+                else
+                {
+                    dict.digits = false;
+                }
+                if(pass.value.length>=8)
+                {
+                    pinfo1.style.display = "none";
+                    dict.length = true;
+                }
+                else
+                {
+                    dict.length = false;
+                }
+                if(Object.values(dict).filter(x=>x==true).length === Object.values(dict).length)
+                {
                     document.getElementById("ppicon").style.opacity = 1;
                     document.getElementById("wpxicon").style.opacity = 0;
-
-
+                    check_dict.password = true;      
                 }
+                else
+                {
+                    document.getElementById("ppicon").style.opacity = 0;
+                    document.getElementById("wpxicon").style.opacity = 1;
+                    check_dict.password = false;                       
+                }
+
             })
         log.addEventListener('input', ()=>
         {
@@ -152,12 +171,14 @@
             {
                 document.getElementById("plicon").style.opacity = 1;
                 document.getElementById("wlicon").style.opacity = 0;
+                check_dict.log = true;
 
             }
             else
             {
                 document.getElementById("wlicon").style.opacity = 1;
                 document.getElementById("plicon").style.opacity = 0;
+                check_dict.log = false;
             }
 
         })
@@ -167,12 +188,14 @@
             {
                 document.getElementById("peicon").style.opacity = 1;
                 document.getElementById("weicon").style.opacity = 0;
+                check_dict.em = true;
 
             }
             else
             {
                 document.getElementById("peicon").style.opacity = 0;
                 document.getElementById("weicon").style.opacity = 1;
+                check_dict.em = false;
             }
 
         })
@@ -182,12 +205,13 @@
             {
                 document.getElementById("paicon").style.opacity = 1;
                 document.getElementById("waicon").style.opacity = 0;
-
+                check_dict.adr = true;
             }
             else
             {
                 document.getElementById("paicon").style.opacity = 0;
                 document.getElementById("waicon").style.opacity = 1;
+                check_dict.adr =false;
             }
 
         })
@@ -197,12 +221,13 @@
             {
                 document.getElementById("psicon").style.opacity = 1;
                 document.getElementById("wsicon").style.opacity = 0;
-
+                check_dict.surname = true;
             }
             else
             {
                 document.getElementById("psicon").style.opacity = 0;
                 document.getElementById("wsicon").style.opacity = 1;
+                check_dict.surname = false;
             }
 
         })
@@ -212,15 +237,26 @@
             {
                 document.getElementById("pnicon").style.opacity = 1;
                 document.getElementById("wnicon").style.opacity = 0;
+                check_dict.namex =true;
 
             }
             else
             {
                 document.getElementById("pnicon").style.opacity = 0;
                 document.getElementById("wnicon").style.opacity = 1;
+                check_dict.namex = false;
             }
 
         })
+        if(Object.values(check_dict).filter(x=>x==true).length === 6)
+        {
+            submitButton.disabled = false;
+        }
+        else
+        {
+            submitButton.disabled = true    ;
+        }
+
     
             
         </script>

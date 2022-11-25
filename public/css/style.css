@@ -159,13 +159,10 @@ a:hover {
     color:red;
     visibility: hidden;
 }
-    .indicator
-    {
-        margin-top: 22%;
-    }
+.indicator
+{
+    margin-top: 22%;
+}
 .wrapper{
-    /* border-color: red;
-    border:1px solid; */
     position: relative;
-    /* border:solid 1px; */
 }

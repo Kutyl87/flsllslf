@@ -105,29 +105,23 @@ a:hover {
 }
 .fa-lock
 {
-    /* position:absolute; */
-    /* top:40%; */
-    /* left:30%;
-    top:4%; */
     color:white;
 
 }
-.fa-key
+.fa-key,
+.fa-lock,
+.fa-envelope,
+.fa-address-card,
+.fa-user,
+.fa-home    
 {
     color:white;
 }
-.fa-envelope
+/* .fa-envelope
 {
     color:white;
 }
-.shit
-{
-    position: relative;
-    border:solid 1px;
-    /* display: inline-block; */
-    /* border:solid 1px; */
-    /* border:solid 1px; */
-}
+
 .fa-address-card
 {
     color:white;
@@ -139,12 +133,9 @@ a:hover {
 .fa-user
 {
     color:white;
+} */
+.passinfo{
+    text-align: left;
+    text-indent: 10%;
+    display:none;
 }
-
-/* .fa{
-    color:white;
-} */
-/* .fa-address-card
-{
-    color:white
-} */
