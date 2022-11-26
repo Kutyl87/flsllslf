@@ -89,6 +89,10 @@ app.post("/login", function(req,res)
 
     })
 })
+// app.get("/validate.js",function(req,res)
+// {
+//     res.sendFile(path.join(__dirname+"/HTML/validate.js"));
+// })
 
 app.listen(3000,function()
 {

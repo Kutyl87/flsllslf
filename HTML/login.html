@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style_form.css" type="text/css" />
     <link rel="stylesheet" href="css/fontello.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <title>Logowanie</title>
 
     <meta name="description" content="" />
@@ -18,10 +19,24 @@
     <div id="login-form">
         <form action="/login" method ="POST">
         <img src="images/hee.png" alt="a"><br /><br />
-        <input class="login_input" type="text" placeholder="Login lub email" name = "username"><br /><br />
-        <input class="login_input" type="password" placeholder="hasło" name="password"><br /><br />
+    
+        <div class = wrapper>
+            <div class=backgr>
+        <i class ="fa fa-user fa-2x"></i>
+            </div>
+            <input class="login_input" type="text" placeholder="Login lub email" name = "username"> 
+    </div>
+</br>
+        <!-- <input class="login_input" type="text" placeholder="Login lub email" name = "username"><br /><br /> -->
+        <div class = wrapper>
+            <div class=backgr>
+        <i class ="fa fa-lock fa-2x"></i>
+            </div>
+            <input class="login_input" type="password" placeholder="hasło" name="password">
+    </div>
+</br>
         <br />
-            <input id="submit_button" type="submit" value="Zaloguj się"><br /><br /><br />
+            <input id="submit_buttonlog" type="submit" value="Zaloguj się"><br /><br /><br />
         </form>
         <a href="/register"><label>Nie masz konta? Zarejestruj się!</label><br /></a>
 </body>

@@ -58,7 +58,8 @@ a:hover {
 }
 
 
-#submit_button{
+#submit_button,
+#submit_buttonlog{
     font-weight: bolder;
     width: 50%;
     color: rgb(255, 255, 255);
