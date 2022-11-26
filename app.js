@@ -27,6 +27,10 @@ app.get("/login", function(req,res)
 {
     res.sendFile(__dirname+"/HTML/login.html");
 })
+app.get("/error404", function(req,res)
+{
+    res.sendFile(__dirname+"/HTML/error404.html");
+})
 app.get("/register", function(req,res)
 {
     res.sendFile(__dirname+"/HTML/registration.html");
@@ -51,7 +55,7 @@ app.post("/register", function (req,res)
     {
         console.log(err);
     }
-    else 
+    else
     {
         console.log(req.body.login);
         res.redirect("/");

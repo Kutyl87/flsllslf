@@ -3,7 +3,7 @@
 
     <head>
         <script src="jquery-1.11.3.min.js"></script>
-        <script src="apps.js"></script>  
+        <script src="apps.js"></script>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="stylesheet" href="css/style_form.css" type="text/css" />
@@ -78,12 +78,12 @@
             <input id = "password" class="login_input" type="password" placeholder="hasło" name = "password">
             </div>
             <div class = "sidemenu">
-                <h6 id = "pinfo1" class ="passinfo" > ● Hasło musi zawierać min. 8 znaków</h6>
-                <h6 id = "pinfo2" class ="passinfo" > ● Hasło musi zawierać min. 1 znak specjalny</h6>
-                <h6 id = "pinfo3" class ="passinfo" > ● Hasło musi zawierać min. 1 cyfrę</h6> 
+                <div id = "pinfo1" class ="passinfo" > ● Hasło musi zawierać min. 8 znaków</div>
+                <div id = "pinfo2" class ="passinfo" > ● Hasło musi zawierać min. 1 znak specjalny</div>
+                <div id = "pinfo3" class ="passinfo" > ● Hasło musi zawierać min. 1 cyfrę</div>
             </div>
             <br />
-                <input id="submit_button" type="submit" value="Register now!" disabled="true"><br /><br /><br />x
+                <input id="submit_button" type="submit" value="Register now" disabled="true"><br /><br /><br />
             </form>
             <a href="/login"><label>Masz już konto? Zaloguj się!</label><br /></a>
             <!-- <div class="logging">
@@ -128,12 +128,12 @@
                 {
                     pinfo1.style.display = "block";
                     pinfo2.style.display = "block";
-                    pinfo3.style.display = "block";                 
+                    pinfo3.style.display = "block";
                 }
                 else{
                     pinfo1.style.display = "none";
                     pinfo2.style.display = "none";
-                    pinfo3.style.display = "none";     
+                    pinfo3.style.display = "none";
                 }
                 if (containsChars(pass.value, /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/ ))
                 {
@@ -167,14 +167,14 @@
                     document.getElementById("ppicon").style.opacity = 1;
                     document.getElementById("wpxicon").style.opacity = 0;
                     check_dict.password = true;
-                    check_enabling()     
+                    check_enabling()
                 }
                 else
                 {
                     document.getElementById("ppicon").style.opacity = 0;
                     document.getElementById("wpxicon").style.opacity = 1;
-                    check_dict.password = false;        
-                    check_enabling()                   
+                    check_dict.password = false;
+                    check_enabling()
                 }
 
             })
@@ -185,7 +185,7 @@
                 document.getElementById("plicon").style.opacity = 1;
                 document.getElementById("wlicon").style.opacity = 0;
                 check_dict.log = true;
-                check_enabling()    
+                check_enabling()
 
             }
             else
@@ -193,7 +193,7 @@
                 document.getElementById("wlicon").style.opacity = 1;
                 document.getElementById("plicon").style.opacity = 0;
                 check_dict.log = false;
-                check_enabling()    
+                check_enabling()
             }
 
         })
@@ -204,7 +204,7 @@
                 document.getElementById("peicon").style.opacity = 1;
                 document.getElementById("weicon").style.opacity = 0;
                 check_dict.em = true;
-                check_enabling()    
+                check_enabling()
 
             }
             else
@@ -212,7 +212,7 @@
                 document.getElementById("peicon").style.opacity = 0;
                 document.getElementById("weicon").style.opacity = 1;
                 check_dict.em = false;
-                check_enabling()    
+                check_enabling()
             }
 
         })
@@ -223,14 +223,14 @@
                 document.getElementById("paicon").style.opacity = 1;
                 document.getElementById("waicon").style.opacity = 0;
                 check_dict.adr = true;
-                check_enabling()    
+                check_enabling()
             }
             else
             {
                 document.getElementById("paicon").style.opacity = 0;
                 document.getElementById("waicon").style.opacity = 1;
                 check_dict.adr =false;
-                check_enabling()    
+                check_enabling()
             }
 
         })
@@ -241,14 +241,14 @@
                 document.getElementById("psicon").style.opacity = 1;
                 document.getElementById("wsicon").style.opacity = 0;
                 check_dict.surname = true;
-                check_enabling()    
+                check_enabling()
             }
             else
             {
                 document.getElementById("psicon").style.opacity = 0;
                 document.getElementById("wsicon").style.opacity = 1;
                 check_dict.surname = false;
-                check_enabling()    
+                check_enabling()
             }
 
         })
@@ -259,7 +259,7 @@
                 document.getElementById("pnicon").style.opacity = 1;
                 document.getElementById("wnicon").style.opacity = 0;
                 check_dict.namex =true;
-                check_enabling()    
+                check_enabling()
 
             }
             else
@@ -267,12 +267,12 @@
                 document.getElementById("pnicon").style.opacity = 0;
                 document.getElementById("wnicon").style.opacity = 1;
                 check_dict.namex = false;
-                check_enabling()    
+                check_enabling()
             }
 
         })
-    
-            
+
+
         </script>
     </body>
 

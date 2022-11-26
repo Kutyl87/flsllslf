@@ -1,5 +1,6 @@
 body {
-    background-color: #303030;
+    min-width: 700px;
+    background-color: #EDEEF7;
     color: #131212;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
@@ -29,10 +30,11 @@ a:hover {
 
 
 .logo{
-    width: 17%;
+    width: 15%;
+    min-width: min-content;
+    margin: 0 1%;
     padding: 5px 0 0 3%;
     float: left;
-
 }
 
 .browser{
@@ -42,23 +44,24 @@ a:hover {
 
 
 .browser_input{
-    margin: 8px 0;
+    margin: 4px 0;
     float: left;
-    height: 30px;
+    height: 40px;
     width: 80%;
     border: 2px inset rgba(20, 55, 78, 0.18);
     outline: none;
+    font-size: 20px;
 }
 
 .search_button{
     float: left;
+    color: #7868E6;
     margin: 9px 0 0 3px;
-    padding: 0 5px 0 0 ;
+    padding: 0 5px 0 0;
     width: 35px;
     font-size: 25px;
     border: none;
-    background-color: rgb(250, 203, 235);
-
+    background-color: #42032C;
 }
 
 .btn{
@@ -102,15 +105,17 @@ a:hover {
     margin: 7px 0 0 0;
     font-size: 30px;
     cursor: pointer;
+    color: #41387a;
 }
 
 .logging {
-    font-size: 20px;
-    box-sizing: border-box;
-    padding: 10px 0 0 0;
+    font-size: 22px;
+    min-width: 200px;
+    padding: 5px 0 0 0;
     float: left;
     width: 35%;
     text-align: right;
+    font-weight: bold;
 }
 .passwordinfo {
      /* float:left; */
@@ -124,22 +129,40 @@ a:hover {
 
 .exc {
     text-align: left;
-    font-size: 10px;float:left; 
+    font-size: 10px;float:left;
     padding-left:14%;
     color:red
 
 }
-.darktheme {
+.settings_menu {
+    display: inline-block;
     margin-left: 20px;
     font-size: 40px;
-    background-color: aqua;
-    width: 5%;
+    color: rgb(255, 246, 199);
+    width: 4%;
     text-align: center;
-    float: left;
+
 }
 
-.darktheme:hover{
-    color:red;
+#dark_theme {
+    background-color: #ff83e6;
+    margin-top: 4px;
+    width: 90px;
+    font-size: 20px;
+    color: aquamarine;
+    margin-left: -15px;
+    display: none;
+    text-align: left;
+    display: none;
+
+}
+
+.settings_menu:active>#dark_theme {
+    display: block;
+}
+
+.settings_menu:hover {
+    color: #41387a;
     cursor: pointer;
 }
 
@@ -165,4 +188,18 @@ a:hover {
 }
 .wrapper{
     position: relative;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: #ccae63;
+    border-top: #895f30 2px solid;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .logging {
+        width: 15%;
+    }
 }
