@@ -27,9 +27,25 @@ app.get("/login", function(req,res)
 {
     res.sendFile(__dirname+"/HTML/login.html");
 })
+app.get("/info", function(req,res)
+{
+    res.sendFile(__dirname+"/HTML/info.html");
+})
 app.get("/error404", function(req,res)
 {
     res.sendFile(__dirname+"/HTML/error404.html");
+})
+app.get("/menu", function(req,res)
+{
+    res.sendFile(__dirname+"/HTML/menu.html");
+})
+app.get("/bag", function(req,res)
+{
+    res.sendFile(__dirname+"/HTML/bag.html");
+})
+app.get("/settings", function(req,res)
+{
+    res.sendFile(__dirname+"/HTML/settings.html");
 })
 app.get("/register", function(req,res)
 {
