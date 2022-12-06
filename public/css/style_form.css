@@ -59,8 +59,8 @@ a:hover {
 }
 
 
-#submit_button,
-#submit_buttonlog{
+.submit_button,
+.submit_buttonlog{
     font-weight: bolder;
     width: 50%;
     color: rgb(255, 255, 255);
@@ -74,12 +74,30 @@ a:hover {
     box-shadow: inset 0px -2px 14px -2px rgba(57, 57, 57, 0.58);
     background: linear-gradient(162deg, rgb(105, 180, 207) 0%, rgba(221, 6, 236, 1) 100%);
 }
-
-#submit_button:hover{
+.sbtx:hover{
     cursor: pointer;
     background: rgb(105, 181, 209);
     background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
 }
+.gray_color{
+    background: gray;
+}
+.sbt:hover{
+    cursor: pointer;
+    background: rgb(105, 181, 209);
+    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
+}
+
+.bgcolor
+{
+    background: rgb(108, 185, 214);
+    background: linear-gradient(162deg, rgb(105, 180, 207) 0%, rgba(221, 6, 236, 1) 100%);
+}
+/* .sbt:hover{
+    cursor: pointer;
+    background: rgb(105, 181, 209);
+    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
+} */
 .fa-check-circle
 {
     position: absolute;
