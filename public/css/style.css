@@ -240,11 +240,15 @@ footer {
 }
 .baritem:link
 {
-    color:#C5C6C7;
+    color:red;
+}
+a{
+    color:green;
 }
 .baritem:hover
 {
     font-weight: bold;
+    color:white;
 }
 ul{
     margin-top: 0px;
@@ -262,6 +266,9 @@ ul li{
 ul li:hover {
     background-color: rgb(2, 2, 45);
 }
+/* #menu:hover {
+    background-color: red;
+} */
 
 .infobox{
     /* position: relative; */
